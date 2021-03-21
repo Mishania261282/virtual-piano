@@ -7,6 +7,7 @@
 .header{    
     text-align: center;
     font-size: 40px;
+    margin-top: 30px;
       
 }
 h1,h2{
@@ -62,7 +63,7 @@ transition: 0.3s;
 	background-color: #df6f13;
 }
 .button-active:hover {
-	background-color: #00c9b7;
+	background-color: #db871a;
 }
 
 .main{

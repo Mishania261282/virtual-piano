@@ -31,10 +31,10 @@ function playSound(e) {
 }
 function renameLetters(e) {
   let button = e.target;
-  button.classList.add('active');
+  button.classList.add('button-active');
   let elem = document.querySelector("#a");
   elem.classList.remove('button-active');
-  elem.classList.remove('active');
+  
   
   let d = document.getElementById('d');
   let f = document.getElementById('f');
@@ -57,9 +57,9 @@ function renameLetters(e) {
 }
 function renameNotes(e) {
   let button = e.target;
-  button.classList.add('active');
+  button.classList.add('button-active');
   let elem = document.querySelector("#b");
-  elem.classList.remove('active');
+  elem.classList.remove('button-active');
   
   let d = document.getElementById('d');
   let f = document.getElementById('f');
