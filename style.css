@@ -1,0 +1,85 @@
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;   
+    
+}
+.header{    
+    text-align: center;
+    font-size: 40px;   
+}
+h1,h2{
+    margin: 0;
+}
+.logo{
+height: 170px;
+width: 145px;
+background-image: url(assets/piano.svg);
+}
+.header__tittle{
+    height: 100px;
+    width: 120px;
+    font-size: 32px;
+    vertical-align: middle;
+    padding: 20px;
+}
+.header__wrapper{
+display: flex;
+width: 900px;
+height: 160px;
+background-color: orange;
+border-radius: 15px;
+}    
+
+.main{
+    width: 900px; 
+}
+.main__wrapper{
+    width: 900px;
+
+}
+
+.piano{    
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;    
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.key{
+    height: 450px;
+    width: 120px;
+    border: 2px green;
+    border-radius: 20px;
+    background-color: #fff;
+    font-size: x-large;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: inset -2px -2px 5px #000;
+    transition: .1s;
+}
+.key.active{
+    background: #ccc;
+}
+.piano-keys-diez{
+    display: flex;
+    width: 770px;
+    padding: 10px 0px;
+    justify-content: space-around;
+    position: absolute;
+    
+}
+.diez{
+    color: white;
+    background-color: black;
+    height: 250px;
+    width: 80px;
+    box-shadow: inset -2px -2px 5px rgb(214, 18, 18);
+}
+.diez_none{
+    opacity: 0;
+}
+.diez.active{
+    background-color: rgb(29, 28, 28);
+}
