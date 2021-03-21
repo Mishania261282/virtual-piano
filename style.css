@@ -6,22 +6,25 @@
 }
 .header{    
     text-align: center;
-    font-size: 40px;   
+    font-size: 40px;
+      
 }
 h1,h2{
     margin: 0;
 }
 .logo{
 height: 170px;
-width: 145px;
+width: 400px;
 background-image: url(assets/piano.svg);
+background-repeat: no-repeat;
 }
 .header__tittle{
     height: 100px;
-    width: 120px;
+    width: 250px;
     font-size: 32px;
     vertical-align: middle;
     padding: 20px;
+    text-align: right;
 }
 .header__wrapper{
 display: flex;
@@ -29,7 +32,38 @@ width: 900px;
 height: 160px;
 background-color: orange;
 border-radius: 15px;
-}    
+justify-content: space-between;
+padding: 10px; 
+box-sizing: border-box;
+} 
+
+.button {
+width: 150px;
+height: 40px;
+padding: 0 10px;
+background-color: #454c53;
+border: 0;
+border-radius: 8px;
+font-family: "Open Sans", sans-serif;
+font-size: 16px;
+font-weight: 300;
+color: #fff;
+outline: 0;
+cursor: pointer;
+transition: 0.3s;
+}
+.button:not(.button-active):hover {
+	background-color: #515961;
+}
+.button.active {
+	background-color: #df6f13;
+}
+.button-active {
+	background-color: #df6f13;
+}
+.button-active:hover {
+	background-color: #00c9b7;
+}
 
 .main{
     width: 900px; 
