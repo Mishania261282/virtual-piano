@@ -99,6 +99,10 @@ transition: 0.3s;
     cursor: pointer;
     box-shadow: inset -2px -2px 5px #000;
     transition: .1s;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 .key.active{
     background: #ccc;
