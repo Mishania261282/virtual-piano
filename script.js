@@ -78,5 +78,22 @@ function renameNotes(e) {
   d.innerText = "C";f.innerText = "D";g.innerText = "E";h.innerText = "F";j.innerText = "G";k.innerText = "A";
   l.innerText = "B";r.innerText = "C#";t.innerText = "D#";u.innerText = "F#";i.innerText = "G#";o.innerText = "A#";
   
-  note.addEventListener('ended',() =>{key.classList.remove('active');})
+  
 }
+document.addEventListener('click', function (event) {
+
+  // игнорирование событий, которые произошли не на данной кнопке
+  if (!event.target.hasAttribute('data-toggle-fullscreen')) return;
+
+  // если элемент уже в полноэкранном режиме, выйти из него
+  // В противном случае войти в полный экран
+  if (document.fullscreenElement) {
+   document.exitFullscreen();
+  } else {
+   document.documentElement.requestFullscreen();
+  }
+
+ }, false);
+
+
+  
