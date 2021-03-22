@@ -1,5 +1,45 @@
-const keys = document.querySelectorAll('.key');
+const keys = document.querySelectorAll(".key");
+const PIANO = document.getElementById("piano");
+
+const playAudio = (event) => {
+  let key = event.target;
+  let note = document.getElementById(key.dataset.note);
+  key.classList.add('active');
+  note.currentTime = 0;
+  note.play();
+  note.addEventListener('ended',() =>{key.classList.remove('active');})
+}
+
+const stopSound = (event) => {
+  event.target.classList.remove("active");
+}
+
+const startCorrespondOver = (event) => {
+  if (event.target.classList.contains("key")) {
+    event.target.classList.add("active");
+  }
+
+  keys.forEach((elem) => {
+    elem.addEventListener("mouseover", playAudio)
+    elem.addEventListener("mouseout", stopSound)
+  });
+}
+
+const stopCorrespondOver = () => {
+  keys.forEach((elem) => {
+    elem.classList.remove("active");
+    elem.removeEventListener("mouseover", playAudio)
+    elem.removeEventListener("mouseout", stopSound)
+  });
+}
 keys.forEach(function (key) { key.addEventListener('click', playAudio); });
+PIANO.addEventListener("mousedown", startCorrespondOver, false);
+PIANO.addEventListener("mouseup", stopCorrespondOver)
+
+
+
+
+
 window.addEventListener('keydown', playSound);
 window.addEventListener('keydown', (event) => playSound(event));
 
@@ -8,14 +48,7 @@ const buttonNotes = document.querySelectorAll('.button-notes');
 buttonLetters.forEach(function (button) { button.addEventListener('click', renameLetters); });
 buttonNotes.forEach(function (button) { button.addEventListener('click', renameNotes); });
 
-function playAudio(e) {
-  let key = e.target;
-  let note = document.getElementById(key.dataset.note);
-  key.classList.add('active');
-  note.currentTime = 0;
-  note.play();
-  note.addEventListener('ended',() =>{key.classList.remove('active');})
-}
+
 
 function playSound(e) {
   const audio = document.querySelector(`audio[data-letter="${e.keyCode}"]`);
@@ -80,6 +113,7 @@ function renameNotes(e) {
   
   
 }
+
 document.addEventListener('click', function (event) {
 
   // игнорирование событий, которые произошли не на данной кнопке
