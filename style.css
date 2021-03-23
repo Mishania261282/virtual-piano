@@ -107,6 +107,13 @@ transition: 0.3s;
 .key.active{
     background: #ccc;
 }
+.key:hover{
+    background-color: #ccc;
+    color: yellow;
+}
+.diez:hover{
+    background-color: rgb(29, 28, 28);
+}
 .piano-keys-diez{
     display: flex;
     width: 770px;
