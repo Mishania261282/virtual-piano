@@ -123,8 +123,14 @@ document.addEventListener('click', function (event) {
   // В противном случае войти в полный экран
   if (document.fullscreenElement) {
    document.exitFullscreen();
+   let key = event.target;
+   key.classList.add('open');
+   key.classList.remove('exit');
   } else {
    document.documentElement.requestFullscreen();
+   let key = event.target;
+   key.classList.add('exit');
+   key.classList.remove('open');
   }
 
  }, false);
