@@ -110,12 +110,13 @@ transition: 0.3s;
     -ms-user-select: none;
 }
 .key.active{
-    background: #ccc;
+    background: rgb(172, 232, 236);
 }
 .key:hover{
-    background-color: rgb(245, 233, 233);
+    
     color: yellow;
 }
+.link:hover{background-color: rgb(241, 216, 216);}
 .diez:hover{
     background-color: rgb(58, 52, 52);
 }

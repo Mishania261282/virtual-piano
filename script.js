@@ -5,6 +5,7 @@ const playAudio = (event) => {
   let key = event.target;
   let note = document.getElementById(key.dataset.note);
   key.classList.add('active');
+  key.classList.remove('link');
   note.currentTime = 0;
   note.play();
   note.addEventListener('ended',() =>{key.classList.remove('active');})
