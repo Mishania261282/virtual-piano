@@ -108,11 +108,11 @@ transition: 0.3s;
     background: #ccc;
 }
 .key:hover{
-    background-color: #ccc;
+    background-color: rgb(245, 233, 233);
     color: yellow;
 }
 .diez:hover{
-    background-color: rgb(29, 28, 28);
+    background-color: rgb(58, 52, 52);
 }
 .piano-keys-diez{
     display: flex;
@@ -120,6 +120,7 @@ transition: 0.3s;
     padding: 10px 0px;
     justify-content: space-around;
     position: absolute;
+    visibility: hidden;
     
 }
 .diez{
@@ -128,6 +129,7 @@ transition: 0.3s;
     height: 250px;
     width: 80px;
     box-shadow: inset -2px -2px 5px rgb(214, 18, 18);
+    visibility: visible;
 }
 .diez_none{
     opacity: 0;
