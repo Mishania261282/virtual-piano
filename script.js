@@ -8,7 +8,7 @@ const playAudio = (event) => {
   key.classList.remove('link');
   note.currentTime = 0;
   note.play();
-  note.addEventListener('ended',() =>{key.classList.remove('active');})
+  note.addEventListener('ended',() =>{key.classList.remove('active');key.classList.add('link');})
 }
 
 const stopSound = (event) => {
