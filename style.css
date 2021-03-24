@@ -6,22 +6,26 @@
 }
 .header{    
     text-align: center;
-    font-size: 40px;   
+    font-size: 40px;
+    margin-top: 30px;
+      
 }
 h1,h2{
     margin: 0;
 }
 .logo{
 height: 170px;
-width: 145px;
+width: 400px;
 background-image: url(assets/piano.svg);
+background-repeat: no-repeat;
 }
 .header__tittle{
     height: 100px;
-    width: 120px;
+    width: 250px;
     font-size: 32px;
     vertical-align: middle;
     padding: 20px;
+    text-align: right;
 }
 .header__wrapper{
 display: flex;
@@ -29,7 +33,49 @@ width: 900px;
 height: 160px;
 background-color: orange;
 border-radius: 15px;
-}    
+justify-content: space-between;
+padding: 10px; 
+box-sizing: border-box;
+} 
+
+.button {
+width: 150px;
+height: 40px;
+padding: 0 10px;
+background-color: #454c53;
+border: 0;
+border-radius: 8px;
+font-family: "Open Sans", sans-serif;
+font-size: 16px;
+font-weight: 300;
+color: #fff;
+outline: 0;
+cursor: pointer;
+transition: 0.3s;
+}
+.button:not(.button-active):hover {
+	background-color: #515961;
+}
+.button.active {
+	background-color: #df6f13;
+}
+.button-active {
+	background-color: #df6f13;
+}
+.button-active:hover {
+	background-color: #db871a;
+}
+.full{
+    
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+}
+.open{background-image: url(assets/fullscreen-open.svg);}
+.full.exit{background-image: url(assets/fullscreen-exit.svg);
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;}
 
 .main{
     width: 900px; 
@@ -58,9 +104,21 @@ border-radius: 15px;
     cursor: pointer;
     box-shadow: inset -2px -2px 5px #000;
     transition: .1s;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 .key.active{
-    background: #ccc;
+    background: rgb(172, 232, 236);
+}
+.key:hover{
+    
+    color: yellow;
+}
+.link:hover{background-color: rgb(243, 194, 194);}
+.diez:hover{
+    background-color: rgb(58, 52, 52);
 }
 .piano-keys-diez{
     display: flex;
@@ -68,6 +126,7 @@ border-radius: 15px;
     padding: 10px 0px;
     justify-content: space-around;
     position: absolute;
+    visibility: hidden;
     
 }
 .diez{
@@ -76,6 +135,7 @@ border-radius: 15px;
     height: 250px;
     width: 80px;
     box-shadow: inset -2px -2px 5px rgb(214, 18, 18);
+    visibility: visible;
 }
 .diez_none{
     opacity: 0;
